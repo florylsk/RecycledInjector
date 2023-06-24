@@ -2,7 +2,7 @@
 #pragma once
 
 #include "windows.h"
-#define _DEBUG 1
+//#define _DEBUG 1
 #ifdef _DEBUG
 #include "stdio.h"
 #endif
