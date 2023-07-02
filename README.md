@@ -13,3 +13,11 @@ Important to also note that the fully undetected part refers to the loading of t
 ```powershell
 .\RecycledInjector.exe <path_to_shellcode_file>
 ```
+
+## Proof of Concept
+
+This proof of concept leverages [Terminator](https://github.com/ZeroMemoryEx/Terminator) by ZeroMemoryEx to kill most security solution/agents present on the system. It is used against Microsoft Defender for Endpoint EDR.
+
+On the left we inject the Terminator shellcode to load the vulnerable driver and kill MDE processes, and on the right is an example of loading and executing Invoke-Mimikatz remotely from memory, which is not stopped as there is no running security solution anymore on the system.
+
+![RecycledInjector](https://github.com/florylsk/RecycledInjector/assets/46110263/b3ae8ada-0e27-47b4-adeb-55ad89aef815)
